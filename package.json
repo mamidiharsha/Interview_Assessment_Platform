@@ -1,0 +1,15 @@
+{
+  "name": "assessment-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:candidate": "cd candidate-app && npm run dev",
+    "dev:admin": "cd admin-app && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:candidate\" \"npm run dev:admin\"",
+    "install:all": "cd server && npm install && cd ../candidate-app && npm install && cd ../admin-app && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
